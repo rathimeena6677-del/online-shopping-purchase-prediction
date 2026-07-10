@@ -244,7 +244,8 @@ if st.button("🔍 Predict Purchase"):
 
     else:
 
-        st.error("❌ Customer is unlikely to Purchase")
+        st.error("❌ Purchase Intention: LOW")
+        st.write("The customer is unlikely to complete a purchase based on their browsing behavior.")
 
         st.metric(
             "Purchase Probability",
@@ -260,4 +261,6 @@ if st.button("🔍 Predict Purchase"):
         st.write("📧 Send reminder email")
 
 st.markdown("---")
-st.caption("Developed by Rathi Meena | Machine Learning Project")
+st.caption(
+    "Developed by Rathi Meena | Online Retail Shopper Purchase Intention Prediction using Machine Learning"
+)
