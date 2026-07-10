@@ -15,16 +15,23 @@ with open("scaler.pkl", "rb") as file:
 # Page Configuration
 # ---------------------------
 st.set_page_config(
-    page_title="Online Shopping Purchase Prediction",
+    page_title="Online Retail Shopper Purchase Intention Prediction",
     page_icon="🛒",
     layout="wide"
 )
 
-st.title("🛒 Online Shopping Purchase Prediction")
+st.title("🛒 Online Retail Shopper Purchase Intention Prediction")
 
 st.markdown("""
-Predict whether a customer is likely to purchase a product based on
-their browsing behavior on an online shopping website.
+### Predict whether an online retail shopper is likely to purchase a product based on their browsing behavior using Machine Learning.
+
+This application analyzes customer browsing behavior such as page visits, browsing duration, bounce rate, exit rate, visitor type, and other session features to predict whether the customer is likely to complete a purchase.
+
+🎯 **Objective:** Help online retailers identify potential buyers and support marketing decisions such as discounts, personalized recommendations, free delivery offers, and promotional campaigns.
+
+🤖 **Machine Learning Model:** Random Forest Classifier
+
+📈 **Model Accuracy:** 89.62%
 """)
 
 st.markdown("---")
@@ -219,7 +226,8 @@ if st.button("🔍 Predict Purchase"):
 
     if prediction[0] == 1:
 
-        st.success("✅ Customer is likely to Purchase")
+        st.success("✅ Purchase Intention: HIGH")
+        st.write("The customer is likely to complete a purchase based on their browsing behavior.")
 
         st.metric(
             "Purchase Probability",
